@@ -1,0 +1,39 @@
+name: 功能建议 (Feature Request)
+description: 建议新分析模块、新行业或体验改进
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        欢迎提议！请说明它解决了什么投资问题。
+  - type: dropdown
+    id: type
+    attributes:
+      label: 建议类型
+      options:
+        - 新增分析模块（如某行业专属指标）
+        - 补充/新增行业
+        - 分析方法或图表改进
+        - 开放平台接入能力
+        - 文档/示例
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 解决什么投资问题？
+      description: 用户带着什么问题来，本功能如何帮他得出结论？
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: 建议细节
+      description: 期望的输入、输出、图表形式，以及参考的老唐方法论或财务逻辑
+  - type: textarea
+    id: refs
+    attributes:
+      label: 参考（可选）
+      description: 赢麻了专业版对应能力、相关财报科目、外部资料链接

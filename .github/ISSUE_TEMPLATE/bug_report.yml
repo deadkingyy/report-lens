@@ -1,0 +1,47 @@
+name: 缺陷报告 (Bug Report)
+description: 报告一个功能异常或排雷误报
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！请尽量提供复现步骤，便于我们定位。
+  - type: textarea
+    id: what
+    attributes:
+      label: 现象描述
+      description: 发生了什么？与预期有何不同？
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤
+      description: 点击路径 / 输入数据 / 行业 / 模块
+      placeholder: |
+        1. 选择问题 X
+        2. 选择行业 Y
+        3. 运行模块 Z
+        4. 观察到……
+    validations:
+      required: true
+  - type: textarea
+    id: sample
+    attributes:
+      label: 相关数据（可选）
+      description: 若是排雷误报/漏报，附上关键科目数值更利于定位阈值
+  - type: dropdown
+    id: data
+    attributes:
+      label: 数据来源
+      options:
+        - 内置演示数据
+        - 赢麻了开放平台（Open AppId）
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: 环境
+      placeholder: 浏览器 / 系统 / Node 版本

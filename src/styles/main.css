@@ -1,0 +1,55 @@
+:root {
+  --wm-page: 246 248 251;
+  --wm-surface: 255 255 255;
+  --wm-ink: 23 30 42;
+  --wm-slate: 100 116 139;
+  --wm-line: 226 232 240;
+  --wm-brand: 47 107 255;
+  --wm-brand-soft: 234 241 255;
+  --wm-font-sans: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background: rgb(var(--wm-page));
+  color: rgb(var(--wm-ink));
+  font-family: var(--wm-font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 表格（附注明细 / 共同比）通用样式 */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.data-table th,
+.data-table td {
+  border: 1px solid rgb(var(--wm-line));
+  padding: 6px 10px;
+  text-align: left;
+}
+.data-table th {
+  background: rgb(var(--wm-brand-soft));
+  color: rgb(var(--wm-ink));
+  font-weight: 600;
+}
+.data-table tbody tr:nth-child(even) {
+  background: rgb(248 250 252);
+}
